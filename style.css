@@ -42,7 +42,7 @@ nav a:hover{
 .hero{
     text-align:center;
     padding:150px 20px;
-    background:url("images/food.png");
+    background:url("food.png");
     background-size:cover;
     background-position:center;
     color:white;
