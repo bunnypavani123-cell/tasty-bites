@@ -4,6 +4,7 @@
     <title>Menu - Tasty Bites</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
@@ -17,25 +18,27 @@
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
     <a href="cart.html">Cart</a>
-    <span id="cart-count">Cart (0)</span>
     <a href="admin.html">Admin</a>
 
+    <span id="cart-count">Cart (0)</span>
 </nav>
 
 <section class="menu">
     <h2>Our Menu</h2>
-    <input
-    type="text"
-    id="search-box"
-    placeholder="🔍 Search Food..."
-    onkeyup="searchFood()">
-    <div class="filter-buttons">
-    <button onclick="filterMenu('all')">All</button>
-    <button onclick="filterMenu('pizza')">Pizza</button>
-    <button onclick="filterMenu('burger')">Burger</button>
-    <button onclick="filterMenu('pasta')">Pasta</button>
-</div>
 
+    <input
+        type="text"
+        id="search-box"
+        placeholder="🔍 Search Food..."
+        onkeyup="searchFood()"
+    >
+
+    <div class="filter-buttons">
+        <button onclick="filterMenu('all')">All</button>
+        <button onclick="filterMenu('pizza')">Pizza</button>
+        <button onclick="filterMenu('burger')">Burger</button>
+        <button onclick="filterMenu('pasta')">Pasta</button>
+    </div>
 
     <div class="menu-container">
 
@@ -43,24 +46,27 @@
             <img src="pizza.png" alt="Pizza">
             <h3>Pizza</h3>
             <p>₹299</p>
-
-            <button onclick="addItem('Pizza')">
-                Add to Cart
-            </button>
+            <button onclick="addItem('Pizza')">Add to Cart</button>
         </div>
+
         <div class="item burger">
             <img src="burger.png" alt="Burger">
             <h3>Burger</h3>
             <p>₹199</p>
             <button onclick="addItem('Burger')">Add to Cart</button>
         </div>
+
         <div class="item pasta">
             <img src="pasta.png" alt="Pasta">
             <h3>Pasta</h3>
             <p>₹249</p>
             <button onclick="addItem('Pasta')">Add to Cart</button>
         </div>
+
+    </div>
 </section>
+
 <script src="script.js"></script>
+
 </body>
 </html>
