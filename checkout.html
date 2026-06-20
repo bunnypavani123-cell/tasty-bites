@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Checkout</h1>
+</header>
+
+<section class="checkout-page">
+
+    <h2>Customer Details</h2>
+
+    <form id="checkout-form">
+
+        <input type="text"
+               placeholder="Your Name"
+               required>
+
+        <input type="tel"
+               placeholder="Phone Number"
+               required>
+
+        <textarea
+            placeholder="Delivery Address"
+            required>
+        </textarea>
+
+        <button type="submit">
+            Place Order
+        </button>
+
+    </form>
+
+</section>
+
+<script>
+document.getElementById("checkout-form")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const customerName =
+    document.querySelector('input[type="text"]').value;
+
+    const cartItems =
+    JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    let totalPrice = 0;
+
+    cartItems.forEach(item => {
+        totalPrice += item.price * item.quantity;
+    });
+
+    const orders =
+    JSON.parse(localStorage.getItem("orders")) || [];
+
+    orders.push({
+    customer: customerName,
+    items: cartItems,
+    total: totalPrice
+});
+    localStorage.setItem(
+        "orders",
+        JSON.stringify(orders)
+    );
+
+    window.location.href = "success.html";
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Admin Panel</h1>
+    <section class="dashboard-stats">
+
+    <div class="stat-box">
+        <h2 id="total-orders">0</h2>
+        <p>Total Orders</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 id="total-revenue">₹0</h2>
+        <p>Total Revenue</p>
+    </div>
+
+</section>
+</header>
+
+<section class="admin-page">
+
+    <h2>Add New Food Item</h2>
+
+    <input type="text" id="food-name" placeholder="Food Name">
+
+    <input type="number" id="food-price" placeholder="Price">
+
+    <button onclick="addFood()">
+        Add Food
+    </button>
+
+    <h2>Food List</h2>
+
+    <ul id="food-list"></ul>
+    <h2>Recent Orders</h2>
+
+<button onclick="clearOrders()">
+    Clear All Orders
+</button>
+
+<ul id="orders-list"></ul>
+
+</section>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
